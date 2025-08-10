@@ -3,6 +3,11 @@ This repository stores Python scripts I wrote in the Summer of 2025 as part of a
 ```
 TeX --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas
 ```
+As far as I am aware, the above workflow requires the following manual editing:
+* Replace any TikZ pictures, figures, etc. with images stored in Canvas
+* Replace any `\emph{}` macros with the HTML italics tags
+* Replace any diacritics (e.g. `jalape\~nos`) with their HTML counterparts
+* Replace any TeX macros contained inside of `\text{}` macros with something different (varies)
 
 ## Substitute
 This function performs simple replacement, attempting to fix some common errors before they occur. Currently, the function performs the following replacements:
