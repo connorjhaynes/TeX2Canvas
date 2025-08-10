@@ -1,5 +1,5 @@
 # TeX2Canvas
-This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
+This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012 Applied Combinatorics at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
 ```
 TeX --> --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas
 ```
