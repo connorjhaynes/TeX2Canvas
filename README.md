@@ -1,8 +1,10 @@
 # TeX2Canvas
-This repository stores Python scripts I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
+This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
 ```
 TeX --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas
 ```
+On Linux, this is as simple as downloading your TeX, naming it `input.tex` and running `python3 textocanvas3.py > out.html`.
+
 There is some code left in the project from my attempts to implement [TeXZilla](https://fred-wang.github.io/TeXZilla/) and [LaTeX2HTMl](https://www.latex2html.org/), but I was dissatisfied with the performance of both, or at least with my implementation of their functionality. I may return to these later, for now I am looking into [Pandoc](https://pandoc.org/).
 
 As far as I am aware, the above workflow requires the following manual editing:
