@@ -8,6 +8,7 @@ As far as I am aware, the above workflow requires the following manual editing:
 * Replace any `\emph{}` macros with the HTML italics tags
 * Replace any diacritics (e.g. `jalape\~nos`) with their HTML counterparts
 * Replace any TeX macros contained inside of `\text{}` macros with something different (varies)
+* Implement any `enumerate` or `itemize` environments with their HTML counterparts
 
 ## Substitute
 This function performs simple replacement, attempting to fix some common errors before they occur. Currently, the function performs the following replacements:
