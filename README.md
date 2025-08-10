@@ -1,10 +1,10 @@
 # TeX2Canvas
 This repository stores Python scripts I wrote in the Summer of 2025 as part of a job writing psets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology.
 
-# Substitute
+## Substitute
 This function performs simple replacement, attempting to fix some common errors before they occur. Currently, the function performs the following replacements:
 ```
-"\newpage" --> ""
+"\newpage"            --> ""
 "\CC"                 --> "\mathbb{C}"
 "\PP"                 --> "\mathbb{P}"
 "\NN"                 --> "\mathbb{N}"
@@ -18,7 +18,7 @@ This function performs simple replacement, attempting to fix some common errors 
 "\medbreak"           --> 2x HTML line break
 ```
 
-# TeX2Dict
+## TeX2Dict
 This function parses TeX to extract information relevant to the project. In particular, it separates the TeX input into categories: questions and solutions. Input TeX should be some combination of the following "question formats":
 ```
 \question <QUESTION_CONTENT> \solution{<SOLUTION_CONTENT>}
@@ -38,4 +38,4 @@ The "content" for any given question, part, or solution, is expected to be a com
 
 Note that for any given `<PART_CONTENT>` with index $$i$$, the index of the corresponding `<SOLUTION_CONTENT>` is $$i-1$$.
 
-# Dict2HTML
+## Dict2HTML
