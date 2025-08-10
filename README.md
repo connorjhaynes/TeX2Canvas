@@ -38,4 +38,7 @@ The "content" for any given question, part, or solution, is expected to be a com
 
 Note that for any given `<PART_CONTENT>` with index $$i$$, the index of the corresponding `<SOLUTION_CONTENT>` is $$i-1$$.
 
+## MM2HTML
+This function replaces math-mode (MM) content with HTML for use in Canvas. In particular, it replaces `$<INLINE_MATHMODE_CONTENT>$` with `\(<INLINE_MATHMODE_CONTENT>\)` and `\[<DISPLAY_MATHMODE_CONTENT>\]` with `<br />\(<DISPLAY_MATHMODE_CONTENT>\)<br />`.
+
 ## Dict2HTML
