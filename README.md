@@ -1,5 +1,5 @@
 # TeX2Canvas
-This repository stores Python scripts I wrote in the Summer of 2025 as part of a job writing psets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology.
+This repository stores Python scripts I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012, Applied Combinatorics, at the Georgia Institute of Technology.
 
 ## Substitute
 This function performs simple replacement, attempting to fix some common errors before they occur. Currently, the function performs the following replacements:
