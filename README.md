@@ -14,6 +14,8 @@ As far as I am aware, the above workflow requires the following manual editing:
 * Replace any TeX macros contained inside of `\text{}` macros with something different (varies)
 * Implement any `enumerate` or `itemize` environments with their HTML counterparts
 
+The above should be viewed as a ToDo list, if anyone else ends up working on this.
+
 ## Substitute
 This function performs simple replacement, attempting to fix some common errors before they occur. Currently, the function performs the following replacements:
 ```
