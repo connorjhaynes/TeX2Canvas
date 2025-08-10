@@ -32,13 +32,12 @@ def Substitute(intext):
         r"\\QQ": r"\\mathbb{Q}",
         r"\\RR": r"\\mathbb{R}",
         r"\\ZZ": r"\\mathbb{Z}",
-        r"\\begin{tikzpicture}": "<h3 style=\"color:red\"> PICTURE/FIGURE MISSING </h3>",
+        r"\\begin{tikzpicture}|\\begin{figure}": "<h3 style=\"color:red\"> PICTURE/FIGURE MISSING </h3>",
         r"\\#": r"#",
         r"``": r"&ldquo;",
         r"''": r"&rdquo;",
         r"\\medbreak": r"<br /><br />",
-        r"\\textrm": r"\\text",
-        r"\\ldots": r"\\dots"
+        r"\\_": r"_"
     }
 
     for i in range(0,len(substitutions)):
@@ -67,7 +66,7 @@ def TeX2Dict(intext):
 
         # if does not contain parts
         else:
-            sSplit= re.split("\\\\soln{", (qSplit[i].rstrip())[:-1]) # this is a naive and fragile way of removing trailing "}" from "\soln{...}", it needs to be replaced
+            sSplit= re.split("\\\\soln{", (qSplit[i].rstrip())[:-1]) # this is a naive and fragile way of removing trailing "}" from "\soln{...}", it needs to be replaced, i know for a fact it is causing issues
             questionSolnDict[i] = [[sSplit[0]], [sSplit[1].rstrip()]]
 
     return questionSolnDict
