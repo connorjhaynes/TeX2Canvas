@@ -1,7 +1,7 @@
 # TeX2Canvas
 This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012 Applied Combinatorics at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
 ```
-TeX --> --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas
+Input TeX --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas --> Manual Cleanup
 ```
 On Linux, this is as simple as downloading the script and placing it in a directory with your TeX, naming your TeX `input.tex`, and running `python3 textocanvas3.py > out.html`. From here I recommend opening your Canvas page in __raw HTML editor mode__ and pasting the HTML where it belongs. This is because the "pretty" HTML editor in Canvas will mess with the math-mode content.
 
