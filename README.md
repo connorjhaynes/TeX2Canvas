@@ -19,7 +19,7 @@ This function performs simple replacement, attempting to fix some common errors 
 ```
 
 ## TeX2Dict
-This function parses TeX to extract information relevant to the project. In particular, it separates the TeX input into categories: questions and solutions. Input TeX should be some combination of the following "question formats":
+This function parses TeX to extract information relevant to the project. In particular, it separates the TeX input into categories: questions and solutions. Input TeX should be some combination of the following "question formats", disregarding linebreaks and other whitespace characters:
 ```
 \question <QUESTION_CONTENT> \solution{<SOLUTION_CONTENT>}
 ````
