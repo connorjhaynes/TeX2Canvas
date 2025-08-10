@@ -41,6 +41,6 @@ Note that for any given `<PART_CONTENT>` with index $$i$$, the index of the corr
 ## MM2HTML
 This function replaces math-mode (MM) content with HTML for use in Canvas. In particular, it replaces `$<INLINE_MATHMODE_CONTENT>$` with `\(<INLINE_MATHMODE_CONTENT>\)` and `\[<DISPLAY_MATHMODE_CONTENT>\]` with `<br />\(<DISPLAY_MATHMODE_CONTENT>\)<br />`.
 
-** The behavior of this function is modified by the `USE_TEXZILLA' global option. For more information see [TeXZilla].**
+* The behavior of this function is modified by the `USE_TEXZILLA' global option. For more information see [TeXZilla].*
 
 ## Dict2HTML
