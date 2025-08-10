@@ -20,6 +20,7 @@ This function performs simple replacement, attempting to fix some common errors 
 "''"                  --> HTML close quote
 "\medbreak"           --> 2x HTML line break
 ```
+This function returns the input text with the above replacements applied.
 
 ## TeX2Dict
 This function parses TeX to extract information relevant to the project. In particular, it separates the TeX input into categories: questions and solutions. Input TeX should be some combination of the following "question formats", disregarding linebreaks and other whitespace characters:
@@ -42,8 +43,9 @@ The "content" for any given question, part, or solution, is expected to be a com
 Note that for any given `<PART_CONTENT>` with index $$i$$, the index of the corresponding `<SOLUTION_CONTENT>` is $$i-1$$.
 
 ## MM2HTML
-This function replaces math-mode (MM) content with HTML for use in Canvas. In particular, it replaces `$<INLINE_MATHMODE_CONTENT>$` with `\(<INLINE_MATHMODE_CONTENT>\)` and `\[<DISPLAY_MATHMODE_CONTENT>\]` with `<br />\(<DISPLAY_MATHMODE_CONTENT>\)<br />`.
+This function replaces math-mode (MM) content with HTML for use in Canvas. In particular, it replaces `$<INLINE_MATHMODE_CONTENT>$` with `\(<INLINE_MATHMODE_CONTENT>\)` and `\[<DISPLAY_MATHMODE_CONTENT>\]` with `<br />\(<DISPLAY_MATHMODE_CONTENT>\)<br />`. It returns the input text with the aforementioned replacements applied.
 
 __The behavior of this function is modified by the `USE_TEXZILLA' global option. For more information see [TeXZilla].__
 
 ## Dict2HTML
+This function takes in the dictionary returned by [TeX2Dict] and returns HTML for use in Canvas. In particular, this function wraps each question (meaning one of the question formats detailed in [TeX2Dict]) with an HTML "expander" box, which allows `<QUESTION_CONTENT>` and `<PART_CONTENT>` to be displayed, and `<SOLUTION_CONTENT>` to be displayed in a drop-down box.
