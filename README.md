@@ -1,9 +1,11 @@
 # TeX2Canvas
-This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012 Applied Combinatorics at the Georgia Institute of Technology. The portion of this repository used to implement TeX into Canvas currently follows the below workflow:
+This repository stores a Python script I wrote in the Summer of 2025 as part of a job writing problem sets for MATH 3012 Applied Combinatorics at the Georgia Institute of Technology. The script itself performs the following:
 ```
-Input TeX --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas --> Manual Cleanup
+Input TeX --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Out
 ```
-On Linux, this is as simple as downloading the script and placing it in a directory with your TeX, naming your TeX `input.tex`, and running `python3 textocanvas3.py > out.html`. From here I recommend opening your Canvas page in __raw HTML editor mode__ and pasting the HTML where it belongs. This is because the "pretty" HTML editor in Canvas will mess with the math-mode content.
+The output can then be copy and pasted into Canvas' __raw HTML editor mode__ wherever it belongs. This is because the "pretty" HTML editor in Canvas will mess with the math-mode content.
+
+On Linux, this is as simple as downloading the script and placing it in a directory with your TeX, naming your TeX `input.tex`, running `python3 textocanvas3.py > out.html`, then pasting and cleaning up.
 
 There is some (inactive) code left in the project from my attempts to implement [TeXZilla](https://fred-wang.github.io/TeXZilla/) and [LaTeX2HTMl](https://www.latex2html.org/), but I was dissatisfied with the performance of both, or at least with my implementation of their functionality. I may return to these later, for now I am looking into [Pandoc](https://pandoc.org/).
 
