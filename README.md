@@ -13,6 +13,7 @@ As far as I am aware, the above workflow requires the following manual editing:
 * Replace any TikZ pictures, figures, etc. with images stored in Canvas (sometimes there can also be weird HTML issues with this, make sure to check the places where figures are missing carefully for things like `</p>` tags too early in the text)
 * Replace any `\emph{}` macros with the HTML italics tags, and similarly for `\textbf{}`
 * Replace any diacritics (e.g. `jalape\~nos`) with their HTML counterparts
+* Fix any missing letters caused by the way I remove trailing curly braces (see line 69 in code)
 * Replace any TeX macros contained inside of `\text{}` macros with something different (varies)
 * Implement any `enumerate` or `itemize` environments with their HTML counterparts
 
