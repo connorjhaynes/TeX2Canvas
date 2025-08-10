@@ -5,7 +5,7 @@ TeX --> --> Substitute --> MM2HTML --> TeX2Dict --> Dict2HTMl --> Canvas
 ```
 On Linux, this is as simple as downloading the script and placing it in a directory with your TeX, naming your TeX `input.tex`, and running `python3 textocanvas3.py > out.html`.
 
-There is some code left in the project from my attempts to implement [TeXZilla](https://fred-wang.github.io/TeXZilla/) and [LaTeX2HTMl](https://www.latex2html.org/), but I was dissatisfied with the performance of both, or at least with my implementation of their functionality. I may return to these later, for now I am looking into [Pandoc](https://pandoc.org/).
+There is some (inactive) code left in the project from my attempts to implement [TeXZilla](https://fred-wang.github.io/TeXZilla/) and [LaTeX2HTMl](https://www.latex2html.org/), but I was dissatisfied with the performance of both, or at least with my implementation of their functionality. I may return to these later, for now I am looking into [Pandoc](https://pandoc.org/).
 
 As far as I am aware, the above workflow requires the following manual editing:
 * Replace any TikZ pictures, figures, etc. with images stored in Canvas
