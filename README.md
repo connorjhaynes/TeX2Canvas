@@ -63,3 +63,9 @@ This function takes in the dictionary returned by [TeX2Dict] and returns HTML fo
 These HTML tags implement the expander functionality in Canvas. The `<FORMATTED_PARTS_CONTENT>` and `<FORMATTED_SOLUTIONS_CONTENT>` strings are simply the concatenation of all part and solution content, respectively, with some additional formatting done to prepend alphabetical indexes and introduce linebreaks between the parts and solutions, respectively.
 
 In addition, extra HTML tagging is added to tell Canvas that it needs to render these expander boxes.
+
+__The behavior of this function is modified by the `USE_LATEX2HTML` global option. For more information see [LaTeX2HTML].__
+
+## TeXZilla
+
+## LaTeX2HTML
