@@ -10,7 +10,7 @@ On Linux, this is as simple as downloading the script and placing it in a direct
 There is some (inactive) code left in the project from my attempts to implement [TeXZilla](https://fred-wang.github.io/TeXZilla/) and [LaTeX2HTMl](https://www.latex2html.org/), but I was dissatisfied with the performance of both, or at least with my implementation of their functionality. I may return to these later, for now I think the most promising option is [Pandoc](https://pandoc.org/).
 
 As far as I am aware, the above workflow requires the following manual editing:
-* Replace any TikZ pictures, figures, etc. with images stored in Canvas
+* Replace any TikZ pictures, figures, etc. with images stored in Canvas (sometimes there can also be weird HTML issues with this, make sure to check the places where figures are missing carefully for things like `</p>` tags too early in the text)
 * Replace any `\emph{}` macros with the HTML italics tags, and similarly for `\textbf{}`
 * Replace any diacritics (e.g. `jalape\~nos`) with their HTML counterparts
 * Replace any TeX macros contained inside of `\text{}` macros with something different (varies)
