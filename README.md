@@ -51,8 +51,6 @@ Note that for any given `<PART_CONTENT>` with index $$i$$, the index of the corr
 ## MM2HTML
 This function replaces math-mode (MM) content with HTML for use in Canvas. In particular, it replaces `$<INLINE_MATHMODE_CONTENT>$` with `\(<INLINE_MATHMODE_CONTENT>\)` and `\[<DISPLAY_MATHMODE_CONTENT>\]` with `<br />\(<DISPLAY_MATHMODE_CONTENT>\)<br />`. It returns the input text with the aforementioned replacements applied.
 
-__The behavior of this function is modified by the `USE_TEXZILLA' global option. For more information see [TeXZilla].__
-
 ## Dict2HTML
 This function takes in the dictionary returned by [TeX2Dict] and returns HTML for use in Canvas. In particular, this function wraps each question (meaning one of the question formats detailed in [TeX2Dict]) with an HTML "expander" box, which allows `<QUESTION_CONTENT>` and `<PART_CONTENT>` to be displayed, and `<SOLUTION_CONTENT>` to be displayed in a drop-down box. It does this by wrapping the aforementioned content in the following manner:
 ```
@@ -64,9 +62,3 @@ This function takes in the dictionary returned by [TeX2Dict] and returns HTML fo
 These HTML tags implement the expander functionality in Canvas. The `<FORMATTED_PARTS_CONTENT>` and `<FORMATTED_SOLUTIONS_CONTENT>` strings are simply the concatenation of all part and solution content, respectively, with some additional formatting done to prepend alphabetical indexes and introduce linebreaks between the parts and solutions, respectively.
 
 In addition, extra HTML tagging is added to tell Canvas that it needs to render these expander boxes.
-
-__The behavior of this function is modified by the `USE_LATEX2HTML` global option. For more information see [LaTeX2HTML].__
-
-## TeXZilla
-
-## LaTeX2HTML
