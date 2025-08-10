@@ -29,6 +29,7 @@ This function performs simple replacement, attempting to fix some common errors 
 "``"                  --> HTML open quote
 "''"                  --> HTML close quote
 "\medbreak"           --> 2x HTML line break
+"\_"                  --> "_"
 ```
 This function returns the input text with the above replacements applied.
 
