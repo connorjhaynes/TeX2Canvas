@@ -9,6 +9,7 @@ import re # , subprocess
 # ...
 # \end{parts}
 
+# non-functional prototyping things
 USE_LATEX2HTML = 0
 USE_TEXZILLA = 0
 
@@ -57,16 +58,16 @@ def TeX2Dict(intext):
         pSplit = re.split("\\\\part", qSplit[i])
         if len(pSplit) != 1:
             for j in range(0,len(pSplit)):
-                tmp = re.split("\\\\soln{", (pSplit[j].rstrip())[:-1]) # see comment in the else branch
-
+                sSplit = re.split("\\\\soln{", (pSplit[j].rstrip())[:-1]) # see comment in the else branch
+                
                 # if we have part/question text
-                questionSolnDict[i][0].append(tmp[0])
+                questionSolnDict[i][0].append(sSplit[0])
                 if j != 0:
-                    questionSolnDict[i][1].append(tmp[1].rstrip())
+                    questionSolnDict[i][1].append(sSplit[1].rstrip())
 
         # if does not contain parts
         else:
-            sSplit= re.split("\\\\soln{", (qSplit[i].rstrip())[:-1]) # this is a naive and fragile way of removing trailing "}" from "\soln{...}", it needs to be replaced, i know for a fact it is causing issues
+            sSplit= re.split("\\\\soln{", (qSplit[i].rstrip())[:-1]) # this ".rstrip()[:-1]" is a naive and fragile way of removing trailing "}" from "\soln{...}", it needs to be replaced, i know for a fact it is causing issues
             questionSolnDict[i] = [[sSplit[0]], [sSplit[1].rstrip()]]
 
     return questionSolnDict
@@ -160,8 +161,8 @@ def MM2HTML(intext):
         displayPrefix = "<br />\\("
         displaySuffix = "\\)<br />"
     tmp = Substitute(intext)
-    tmp = ixIterator(re.split(r"\$", tmp), inlinePrefix, inlineSuffix)
-    out = ixIterator(re.split(r"\\\[|\\\]", tmp), displayPrefix, displaySuffix)
+    out = ixIterator(re.split(r"\$", tmp), inlinePrefix, inlineSuffix)
+    # out = ixIterator(re.split(r"\\\[|\\\]", tmp), displayPrefix, displaySuffix)
     return out
 
 # prefix = "<head>\n<script type=\"text/javascript\" src=\"./TeXZilla.js\"></script>\n<script type=\"text/javascript\" src=\"./customElement.js\"></script>\n</head>\n<div class=\"dp-panels-wrapper dp-expander-default\">\n"
