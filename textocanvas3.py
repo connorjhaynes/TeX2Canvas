@@ -13,7 +13,7 @@ import re # , subprocess
 USE_LATEX2HTML = 0
 USE_TEXZILLA = 0
 
-preamble = open("preamble.txt", 'r').read()
+preamble = open("preamble.txt", 'r').read() # see above
 
 def ixIterator(arr, prefix, suffix):
     out = ""
